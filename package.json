@@ -1,0 +1,26 @@
+{
+  "name": "portfolio-v2.0",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "generate": "nuxi generate",
+    "preview": "nuxi preview",
+    "lint": "eslint .",
+    "prepare": "nuxi prepare"
+  },
+  "devDependencies": {
+    "@nuxt/content": "^2.7.2",
+    "@nuxt/devtools": "^0.8.0",
+    "@nuxt/eslint-config": "^0.1.1",
+    "@nuxt/image": "1.0.0-rc.1",
+    "@nuxthq/ui": "^2.7.0",
+    "@nuxtjs/fontaine": "^0.4.1",
+    "@tailwindcss/typography": "^0.5.9",
+    "@types/node": "^20.4.0",
+    "eslint": "^8.44.0",
+    "nuxt": "^3.6.5",
+    "nuxt-icon": "^0.5.0"
+  }
+}
