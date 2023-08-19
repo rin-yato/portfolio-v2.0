@@ -10,7 +10,13 @@ export default defineNuxtConfig({
     '@nuxt/image',
   ],
 
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true,
+
+    timeline: {
+      enabled: true,
+    },
+  },
 
   colorMode: {
     classSuffix: '',
@@ -20,6 +26,16 @@ export default defineNuxtConfig({
   },
 
   css: ['~/assets/globals.css'],
+
+  routeRules: {
+    '/': { prerender: true, static: true },
+    '/blogs': { prerender: true, static: true },
+    '/manga': { prerender: true, static: true },
+  },
+
+  experimental: {
+    typedPages: true,
+  },
 
   content: {
     highlight: {

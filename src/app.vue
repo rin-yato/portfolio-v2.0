@@ -5,9 +5,9 @@
     <Navbar />
     <NuxtPage />
   </main>
-  <UNotifications
+  <!-- <UNotifications
     :ui="{
       position: 'top-0 left-1/2 -translate-x-1/2',
     }"
-  />
+  /> -->
 </template>

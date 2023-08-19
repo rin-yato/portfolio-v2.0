@@ -22,16 +22,16 @@ const SocialConfig = [
   },
 ];
 
-const toast = useToast();
+// const toast = useToast();
 
-const copyGmail = () => {
-  window.navigator.clipboard.writeText('chearithorn@gmail.com');
-  toast.add({
-    icon: 'i-heroicons-clipboard-document-check-solid',
-    title: 'Gmail has been copied to clipboard.',
-    color: 'gray',
-  });
-};
+// const copyGmail = () => {
+//   window.navigator.clipboard.writeText('chearithorn@gmail.com');
+//   toast.add({
+//     icon: 'i-heroicons-clipboard-document-check-solid',
+//     title: 'Gmail has been copied to clipboard.',
+//     color: 'gray',
+//   });
+// };
 </script>
 
 <template>
@@ -52,13 +52,7 @@ const copyGmail = () => {
           >
             Click to copy gmail
           </UBadge>
-          <UButton
-            id="email"
-            color="gray"
-            :padded="false"
-            variant="link"
-            @click="copyGmail"
-          >
+          <UButton id="email" color="gray" :padded="false" variant="link">
             chearithorn@gmail.com
           </UButton>
         </div>
