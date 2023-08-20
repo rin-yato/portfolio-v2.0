@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     '@nuxtjs/fontaine',
     'nuxt-icon',
     '@nuxthq/ui',
-    '@nuxt/image-edge',
+    '@nuxt/image',
     'dayjs-nuxt',
     '@nuxtjs/robots',
     'nuxt-simple-sitemap',
@@ -27,10 +27,10 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    '/': { prerender: true },
-    '/blogs': { prerender: true },
-    '/manga': { prerender: true },
-    '/blogs/**': { isr: true },
+    '/': { prerender: true, static: true },
+    '/blogs': { prerender: true, static: true },
+    '/manga': { prerender: true, static: true },
+    '/blogs/**': { isr: true, static: true },
   },
 
   experimental: {
