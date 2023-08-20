@@ -21,7 +21,7 @@ const onBackToTop = () => {
       <NuxtImg
         :src="doc.cover || '/ducks.jpg'"
         :alt="doc.title + '-cover'"
-        class="rounded-lg"
+        class="rounded-lg bg-gray-900"
         sizes="sm:800 md:1000 lg:1200"
         height="720"
       />

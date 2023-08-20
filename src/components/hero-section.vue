@@ -33,7 +33,7 @@ const SocialConfig = [
         width="100"
         format="webp"
         sizes="sm:100 md:200"
-        class="rounded-full"
+        class="rounded-full bg-gray-900"
       />
       <div class="my-auto">
         <h2 class="text-xl font-bold">RinYato&nbsp;🍀</h2>
@@ -56,14 +56,12 @@ const SocialConfig = [
       and a tiny bit of a designer. Beside coding, I make educational content
       about tech.
     </h1>
-    <div
-      class="grid grid-cols-2 md:grid-cols-3 gap-3 max-w-full overflow-x-auto"
-    >
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
       <div class="flex flex-col gap-3">
         <NuxtImg
           src="/dreamslab-team.jpg"
           alt="Dreamslab Team"
-          class="rounded brightness-125"
+          class="rounded brightness-125 bg-gray-900"
           format="webp"
           height="250"
           sizes="sm:200 md:400"
@@ -71,27 +69,27 @@ const SocialConfig = [
         <NuxtImg
           src="/cats.jpg"
           alt="Cat"
-          class="rounded"
+          class="rounded bg-gray-900"
           format="webp"
           height="500"
           sizes="sm:280 md:450"
         />
       </div>
-      <div>
-        <NuxtImg
-          src="/angkor.jpeg"
-          alt="Acient Temple"
-          class="rounded"
-          format="webp"
-          height="868"
-          sizes="sm:287 md:488"
-        />
-      </div>
+
+      <NuxtImg
+        src="/angkor.jpeg"
+        alt="Acient Temple"
+        class="rounded bg-gray-900"
+        format="webp"
+        height="868"
+        sizes="sm:287 md:488"
+      />
+
       <div class="flex flex-row md:flex-col gap-3">
         <NuxtImg
           src="/profile-half.jpg"
           alt="Yato"
-          class="rounded"
+          class="rounded bg-gray-900"
           format="webp"
           height="450"
           sizes="sm:350 md:450"
@@ -99,7 +97,7 @@ const SocialConfig = [
         <NuxtImg
           src="/house-garden.jpeg"
           alt="Yato"
-          class="rounded"
+          class="rounded bg-gray-900"
           format="webp"
           height="400"
           sizes="sm:350 md:550"

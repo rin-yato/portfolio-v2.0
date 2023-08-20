@@ -32,7 +32,7 @@ useSeoMeta({
             }"
           >
             <NuxtImg
-              class="rounded-md"
+              class="rounded-md bg-gray-900 border border-gray-600"
               :src="manga.cover"
               :alt="manga.title + '-cover'"
               :format="manga.cover.endsWith('.gif') ? 'gif' : 'webp'"

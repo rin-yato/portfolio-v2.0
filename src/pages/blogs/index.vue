@@ -25,7 +25,7 @@ const dayjs = useDayjs();
               <NuxtImg
                 :src="blog.cover || '/ducks.jpg'"
                 :alt="blog.title + '-cover'"
-                class="rounded-lg"
+                class="rounded-lg bg-gray-900"
                 height="128"
                 width="128"
               />
