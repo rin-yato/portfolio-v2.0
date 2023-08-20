@@ -41,10 +41,7 @@ export default defineNuxtConfig({
 
   content: {
     highlight: {
-      theme: 'monokai',
-    },
-    markdown: {
-      anchorLinks: false,
+      theme: 'poimandres',
     },
   },
 });

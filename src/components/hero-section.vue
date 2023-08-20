@@ -26,12 +26,14 @@ const SocialConfig = [
 <template>
   <section class="space-y-5">
     <div class="flex gap-5">
-      <UAvatar
+      <NuxtImg
         src="/profile-sky.jpg"
         alt="Yato"
-        size="3xl"
-        chip-color="primary"
-        class="object-cover object-bottom"
+        width="100"
+        height="100"
+        format="webp"
+        sizes="sm:100 md:200 lg:300 xl:300"
+        class="rounded-full"
       />
       <div class="my-auto">
         <h2 class="text-xl font-bold">RinYato&nbsp;🍀</h2>
@@ -55,48 +57,58 @@ const SocialConfig = [
       about tech.
     </h1>
     <div
-      class="flex flex-col md:flex-row gap-3 lg:gap-5 max-w-full overflow-x-auto"
+      class="grid grid-cols-2 md:grid-cols-3 gap-3 max-w-full overflow-x-auto"
     >
-      <div class="grid grid-cols-2 gap-3 md:gap-5">
-        <div class="flex flex-col gap-3 md:gap-5">
-          <NuxtImg
-            src="/dreamslab-team.jpg"
-            alt="Dreamslab Team"
-            class="rounded h-40 w-full object-cover"
-            quality="100"
-            format="webp"
-          />
-          <NuxtImg
-            src="/cats.jpg"
-            alt="Cat"
-            class="rounded h-56 w-full object-cover object-top"
-            quality="100"
-            format="webp"
-          />
-        </div>
-        <div>
-          <NuxtImg
-            src="/angkor.jpeg"
-            alt="Acient Temple"
-            class="rounded h-[396px] md:h-[404px] w-full object-cover"
-            quality="100"
-            format="webp"
-          />
-        </div>
+      <div class="flex flex-col gap-3">
+        <NuxtImg
+          src="/dreamslab-team.jpg"
+          alt="Dreamslab Team"
+          class="rounded brightness-125"
+          format="webp"
+          width="400"
+          height="250"
+          sizes="sm:250 md:300 lg:400 xl:450"
+        />
+        <NuxtImg
+          src="/cats.jpg"
+          alt="Cat"
+          class="rounded"
+          format="webp"
+          width="400"
+          height="500"
+          sizes="sm:250 md:300 lg:400 xl:450"
+        />
       </div>
-      <div class="flex flex-row md:flex-col gap-3 md:gap-5">
+      <div>
+        <NuxtImg
+          src="/angkor.jpeg"
+          alt="Acient Temple"
+          class="rounded"
+          format="webp"
+          width="400"
+          height="772"
+          sizes="sm:250 md:300 lg:400 xl:450"
+        />
+      </div>
+      <div class="flex flex-row md:flex-col gap-3">
         <NuxtImg
           src="/profile-half.jpg"
           alt="Yato"
-          class="rounded h-56 md:w-full object-cover"
-          quality="100"
+          class="rounded"
           format="webp"
+          width="400"
+          height="450"
+          sizes="sm:250 md:300 lg:400 xl:450"
         />
         <NuxtImg
           src="/house-garden.jpeg"
           alt="Yato"
-          class="rounded h-56 md:h-40 w-full object-cover"
+          class="rounded"
+          fit="cover"
           format="webp"
+          width="400"
+          height="300"
+          sizes="sm:250 md:300 lg:400 xl:450"
         />
       </div>
     </div>
@@ -117,9 +129,11 @@ const SocialConfig = [
           <Icon :name="social.icon" size="24" />
           <span>{{ social.username }}</span>
         </span>
-        <span class="-rotate-45 ml-auto group-hover:scale-150 duration-200">
-          &rarr;
-        </span>
+
+        <Icon
+          name="iconoir:arrow-tr"
+          class="ml-auto group-hover:scale-150 duration-200"
+        />
       </UButton>
     </div>
   </section>

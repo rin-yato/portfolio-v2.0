@@ -15,7 +15,7 @@ const onBackToTop = () => {
         :datetime="dayjs(doc.date).utc().toString()"
       >
         {{ dayjs(doc.date).format('DD MMM YYYY') }}
-        <ClientOnly> - {{ dayjs(doc.date).fromNow() }} </ClientOnly>
+        - {{ dayjs(doc.date).fromNow() }}
       </time>
 
       <NuxtImg
@@ -32,3 +32,34 @@ const onBackToTop = () => {
     </UButton>
   </article>
 </template>
+
+<style scoped>
+.prose :deep(h2 a) {
+  text-decoration: none !important;
+  position: relative !important;
+}
+.prose :deep(h2 a::before) {
+  content: '#' !important;
+  color: #4ade80 !important;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  @apply absolute top-1/2 -translate-y-1/2 -right-5 hidden;
+}
+
+.prose :deep(h2 a:hover::before) {
+  @apply block;
+}
+
+.prose :deep(h2 a) {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+}
+
+.prose :deep(.prose-a:hover) {
+  color: #4ade80 !important;
+}
+
+.prose :deep(.prose-li) {
+  margin: 8px 0 !important;
+}
+</style>

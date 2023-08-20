@@ -1,3 +1,18 @@
+<script setup lang="ts">
+useSeoMeta({
+  title: 'RinYato - Manga list',
+  description:
+    'This is a collection of amazing manga that I have read and enjoyed.',
+  ogTitle: 'RinYato - Manga list',
+  ogDescription:
+    'This is a collection of amazing manga that I have read and enjoyed.',
+  twitterDescription:
+    'This is a collection of amazing manga that I have read and enjoyed.',
+  ogImage: '/dreamslab-team.jpg',
+  ogUrl: 'https://rinyato.com/manga',
+});
+</script>
+
 <template>
   <section class="space-y-5">
     <div id="sss-tier" class="">
@@ -17,10 +32,12 @@
             }"
           >
             <NuxtImg
-              class="rounded-md w-full h-full object-cover"
+              class="rounded-md"
               :src="manga.cover"
               :alt="manga.title + '-cover'"
-              format="webp"
+              :format="manga.cover.endsWith('.gif') ? 'gif' : 'webp'"
+              width="355"
+              height="500"
             />
             <div
               class="absolute bottom-0 left-0 right-0 pt-14 bg-gradient-to-t from-black/90 to-transparent text-white p-2 rounded-b-md"
