@@ -20,7 +20,10 @@ const onBackToTop = () => {
 
       <NuxtImg
         :src="doc.cover || '/ducks.jpg'"
-        class="w-full lg:max-h-[35vh] object-cover rounded-lg"
+        :alt="doc.title + '-cover'"
+        class="rounded-lg"
+        sizes="sm:800 md:1000 lg:1200"
+        height="720"
       />
 
       <ContentRenderer :value="doc" class="render" />

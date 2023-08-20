@@ -1,6 +1,6 @@
 ---
 date: 20-Aug-2023
-cover: /ducks.jpg
+cover: /abstract.jpeg
 title: What is React Server Component?
 description: React Server Components are a new way to build websites. They allow you to write your components in JavaScript and then render them on the server, which means that you can use all of the power of React without having to worry about browser compatibility or performance issues.
 ---

@@ -29,10 +29,10 @@ const SocialConfig = [
       <NuxtImg
         src="/profile-sky.jpg"
         alt="Yato"
-        width="100"
         height="100"
+        width="100"
         format="webp"
-        sizes="sm:100 md:200 lg:300 xl:300"
+        sizes="sm:100 md:200"
         class="rounded-full"
       />
       <div class="my-auto">
@@ -65,18 +65,16 @@ const SocialConfig = [
           alt="Dreamslab Team"
           class="rounded brightness-125"
           format="webp"
-          width="400"
           height="250"
-          sizes="sm:250 md:300 lg:400 xl:450"
+          sizes="sm:200 md:400"
         />
         <NuxtImg
           src="/cats.jpg"
           alt="Cat"
           class="rounded"
           format="webp"
-          width="400"
           height="500"
-          sizes="sm:250 md:300 lg:400 xl:450"
+          sizes="sm:280 md:450"
         />
       </div>
       <div>
@@ -85,9 +83,8 @@ const SocialConfig = [
           alt="Acient Temple"
           class="rounded"
           format="webp"
-          width="400"
-          height="772"
-          sizes="sm:250 md:300 lg:400 xl:450"
+          height="868"
+          sizes="sm:287 md:488"
         />
       </div>
       <div class="flex flex-row md:flex-col gap-3">
@@ -96,19 +93,16 @@ const SocialConfig = [
           alt="Yato"
           class="rounded"
           format="webp"
-          width="400"
           height="450"
-          sizes="sm:250 md:300 lg:400 xl:450"
+          sizes="sm:350 md:450"
         />
         <NuxtImg
           src="/house-garden.jpeg"
           alt="Yato"
           class="rounded"
-          fit="cover"
           format="webp"
-          width="400"
-          height="300"
-          sizes="sm:250 md:300 lg:400 xl:450"
+          height="400"
+          sizes="sm:350 md:550"
         />
       </div>
     </div>

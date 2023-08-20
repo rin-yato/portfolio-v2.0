@@ -11,8 +11,6 @@
     "prepare": "nuxi prepare"
   },
   "devDependencies": {
-    "@nuxt-themes/elements": "^1.0.5",
-    "@nuxt-themes/tokens": "^2.1.1",
     "@nuxt-themes/typography": "^1.0.1",
     "@nuxt/content": "^2.7.2",
     "@nuxt/devtools": "^0.8.0",
@@ -20,10 +18,12 @@
     "@nuxt/image": "1.0.0-rc.1",
     "@nuxthq/ui": "^2.7.0",
     "@nuxtjs/fontaine": "^0.4.1",
+    "@nuxtjs/robots": "^3.0.0",
     "@types/node": "^20.4.0",
     "dayjs-nuxt": "^1.1.2",
     "eslint": "^8.44.0",
     "nuxt": "^3.6.5",
-    "nuxt-icon": "^0.5.0"
+    "nuxt-icon": "^0.5.0",
+    "nuxt-simple-sitemap": "^3.1.8"
   }
 }

@@ -11,14 +11,12 @@ export default defineNuxtConfig({
     '@nuxthq/ui',
     '@nuxt/image',
     'dayjs-nuxt',
+    '@nuxtjs/robots',
+    'nuxt-simple-sitemap',
   ],
 
   devtools: {
     enabled: true,
-
-    timeline: {
-      enabled: true,
-    },
   },
 
   colorMode: {
@@ -29,19 +27,32 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    '/': { prerender: true, static: true },
-    '/blogs': { prerender: true, static: true },
-    '/manga': { prerender: true, static: true },
-    '/blogs/:slug': { static: true },
+    '/': { prerender: true },
+    '/blogs': { prerender: true },
+    '/manga': { prerender: true },
+    '/blogs/**': { isr: true },
   },
 
   experimental: {
     typedPages: true,
+    payloadExtraction: true,
   },
 
   content: {
     highlight: {
       theme: 'poimandres',
+      preload: [
+        'ts',
+        'tsx',
+        'bash',
+        'sh',
+        'scss',
+        'css',
+        'json',
+        'docker',
+        'markdown',
+        'yaml',
+      ],
     },
   },
 });
