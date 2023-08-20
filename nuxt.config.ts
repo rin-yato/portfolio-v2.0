@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     '@nuxtjs/fontaine',
     'nuxt-icon',
     '@nuxthq/ui',
-    '@nuxt/image',
+    '@nuxt/image-edge',
     'dayjs-nuxt',
     '@nuxtjs/robots',
     'nuxt-simple-sitemap',
