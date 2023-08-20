@@ -16,17 +16,9 @@ const Technologies = [
     url: 'https://www.typescriptlang.org',
   },
   {
-    name: 'Shadcn UI',
-    url: 'https://ui.shadcn.com',
-  },
-  {
     name: 'Zod',
     icon: 'simple-icons:zod',
     url: 'https://zod.dev',
-  },
-  {
-    name: 'Elysiajs',
-    url: 'https://elysiajs.com',
   },
   {
     name: 'Astro',
@@ -34,14 +26,19 @@ const Technologies = [
     icon: 'simple-icons:astro',
   },
   {
-    name: 'Docker',
-    url: 'https://www.docker.com',
-    icon: 'logos:docker-icon',
+    name: 'Tailwindcss',
+    url: 'https://tailwindcss.com',
+    icon: 'logos:tailwindcss-icon',
   },
   {
     name: 'Nginx',
     url: 'https://www.nginx.com',
     icon: 'logos:nginx',
+  },
+  {
+    name: 'Docker',
+    url: 'https://www.docker.com',
+    icon: 'logos:docker-icon',
   },
   {
     name: 'Nestjs',
@@ -54,11 +51,6 @@ const Technologies = [
     icon: 'devicon:go',
   },
   {
-    name: 'Tailwindcss',
-    url: 'https://tailwindcss.com',
-    icon: 'logos:tailwindcss-icon',
-  },
-  {
     name: 'Jōtai',
     url: 'https://jotai.pmnd.rs',
   },
@@ -66,6 +58,10 @@ const Technologies = [
     name: 'Threejs & R3F',
     url: 'https://docs.pmnd.rs/react-three-fiber/getting-started/introduction',
     icon: 'skill-icons:threejs-light',
+  },
+  {
+    name: 'Elysiajs',
+    url: 'https://elysiajs.com',
   },
   {
     name: 'React Native',
@@ -77,12 +73,16 @@ const Technologies = [
     url: 'https://expo.dev',
     icon: 'simple-icons:expo',
   },
+  {
+    name: 'Shadcn UI',
+    url: 'https://ui.shadcn.com',
+  },
 ];
 </script>
 
 <template>
   <section id="technologies-list" class="space-y-5">
-    <h2 class="leading-relaxed font-light">
+    <h2 class="leading-relaxed lg:font-light">
       I have always believed that as a developer, you should not stick to just
       one technology. You should always be open to learning new things. Below
       are some of the technologies that I have worked with and really enjoyed.

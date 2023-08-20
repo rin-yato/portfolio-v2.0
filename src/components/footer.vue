@@ -1,9 +1,9 @@
 <template>
   <footer class="space-y-5 pb-5">
-    <h2>
+    <h2 class="leading-relaxed lg:font-light">
       Wow! you've made it to the end, I'm impressed. You should definitely say
       hi to me on social media. I share a lot of useful content there and memes
-      too 😂. On and by the way, you can checkout my
+      too 😂. Oh and by the way, you can checkout my
       <NuxtLink to="/blog" class="underline underline-offset-2">
         blog 📃
       </NuxtLink>
@@ -27,6 +27,7 @@
         color="white"
         variant="link"
         to="https://t.me/rinyato"
+        class="hidden sm:flex"
       >
         Check out my blogs &nearr;
       </UButton>

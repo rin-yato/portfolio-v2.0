@@ -19,7 +19,7 @@ const HighlightRepos = [
 
 <template>
   <section id="project-hightlights" class="space-y-5">
-    <h2 class="font-light leading-relaxed">
+    <h2 class="lg:font-light leading-relaxed">
       I'm the kind of person who love to learn new things and try new
       technologies. I've worked on some interesting projects, ranging from
       Artificial Intelligence to Blockchain development. I also create and

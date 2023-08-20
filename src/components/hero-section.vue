@@ -21,50 +21,89 @@ const SocialConfig = [
     link: 'https://www.facebook.com/chearithorn',
   },
 ];
-
-// const toast = useToast();
-
-// const copyGmail = () => {
-//   window.navigator.clipboard.writeText('chearithorn@gmail.com');
-//   toast.add({
-//     icon: 'i-heroicons-clipboard-document-check-solid',
-//     title: 'Gmail has been copied to clipboard.',
-//     color: 'gray',
-//   });
-// };
 </script>
 
 <template>
   <section class="space-y-5">
     <div class="flex gap-5">
       <UAvatar
-        src="https://avatars.githubusercontent.com/u/106462074?v=4"
+        src="/profile-sky.jpg"
         alt="Yato"
         size="3xl"
+        chip-color="primary"
+        class="object-cover object-bottom"
       />
       <div class="my-auto">
         <h2 class="text-xl font-bold">RinYato&nbsp;🍀</h2>
-        <div class="group relative">
-          <UBadge
-            variant="solid"
-            color="white"
-            class="absolute pointer-events-none left-full w-max z-20 opacity-0 group-hover:opacity-100 group-hover:translate-x-3 duration-200"
-          >
-            Click to copy gmail
-          </UBadge>
-          <UButton id="email" color="gray" :padded="false" variant="link">
-            chearithorn@gmail.com
-          </UButton>
-        </div>
+
+        <UButton
+          id="email"
+          color="gray"
+          :padded="false"
+          variant="link"
+          to="mailto:chearithorn@gmail.com"
+        >
+          chearithorn@gmail.com
+        </UButton>
+
         <p class="text-gray-400 text-sm">@rinyato</p>
       </div>
     </div>
-    <h1 class="font-light leading-relaxed">
-      Hi there, this is <span class="hover:underline">Yato</span> ✌️. I'm a
-      developer and a tiny bit of a designer. Beside coding, I like making
-      educational content about tech. I love to learn new things and share them
-      with others. You can find me on social apps with the links below.
+    <h1 class="lg:font-light leading-relaxed my-0">
+      Hi, this is <span class="hover:underline">Yato</span> ✌️. I'm a developer
+      and a tiny bit of a designer. Beside coding, I make educational content
+      about tech.
     </h1>
+    <div
+      class="flex flex-col md:flex-row gap-3 lg:gap-5 max-w-full overflow-x-auto"
+    >
+      <div class="grid grid-cols-2 gap-3 md:gap-5">
+        <div class="flex flex-col gap-3 md:gap-5">
+          <NuxtImg
+            src="/dreamslab-team.jpg"
+            alt="Dreamslab Team"
+            class="rounded h-40 w-full object-cover"
+            quality="100"
+            format="webp"
+          />
+          <NuxtImg
+            src="/cats.jpg"
+            alt="Cat"
+            class="rounded h-56 w-full object-cover object-top"
+            quality="100"
+            format="webp"
+          />
+        </div>
+        <div>
+          <NuxtImg
+            src="/angkor.jpeg"
+            alt="Acient Temple"
+            class="rounded h-[396px] md:h-[404px] w-full object-cover"
+            quality="100"
+            format="webp"
+          />
+        </div>
+      </div>
+      <div class="flex flex-row md:flex-col gap-3 md:gap-5">
+        <NuxtImg
+          src="/profile-half.jpg"
+          alt="Yato"
+          class="rounded h-56 md:w-full object-cover"
+          quality="100"
+          format="webp"
+        />
+        <NuxtImg
+          src="/house-garden.jpeg"
+          alt="Yato"
+          class="rounded h-56 md:h-40 w-full object-cover"
+          format="webp"
+        />
+      </div>
+    </div>
+    <h2 class="lg:font-light leading-relaxed">
+      I love to learn new things and share them with others. You can find me on
+      social apps with the links below.
+    </h2>
     <div class="gap-3 md:gap-5 grid grid-cols-2 md:grid-cols-4">
       <UButton
         v-for="social in SocialConfig"
