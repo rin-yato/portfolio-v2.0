@@ -32,6 +32,7 @@ export default defineNuxtConfig({
     '/': { prerender: true, static: true },
     '/blogs': { prerender: true, static: true },
     '/manga': { prerender: true, static: true },
+    '/blogs/:slug': { static: true },
   },
 
   experimental: {

@@ -1,24 +1,3 @@
-<script setup lang="ts">
-import { MANGA } from '@consumet/extensions';
-
-const mangaDex = new MANGA.MangaDex();
-
-const sssTierMangaIds = (
-  await $fetch<any>(
-    'https://api.mangadex.org/list/454216a0-7d6d-456a-a7f9-54bdfa128fc9?latest',
-  )
-).data.relationships.filter((item: any) => item.type === 'manga');
-
-const sssTierMangas = await Promise.all(
-  sssTierMangaIds.map(async (item: any) => {
-    const mangaData = await mangaDex.fetchMangaInfo(item.id);
-    return mangaData;
-  }),
-);
-
-console.log(sssTierMangas);
-</script>
-
 <template>
   <section class="space-y-5">
     <div id="sss-tier" class="">
@@ -27,20 +6,21 @@ console.log(sssTierMangas);
         class="mt-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5"
       >
         <div
-          v-for="manga in sssTierMangas"
-          :key="manga.id"
+          v-for="manga in SSSTierManga"
+          :key="manga.title"
           class="relative flex"
         >
           <UTooltip
-            :text="manga.description.en"
+            :text="manga?.description"
             :ui="{
-              base: 'invisible lg:visible h-full px-2 py-1 text-xs font-normal line-clamp-6',
+              base: 'invisible lg:visible h-full px-2 py-1 text-sm font-normal border border-gray-700',
             }"
           >
             <NuxtImg
               class="rounded-md w-full h-full object-cover"
-              :src="manga.image"
+              :src="manga.cover"
               :alt="manga.title + '-cover'"
+              format="webp"
             />
             <div
               class="absolute bottom-0 left-0 right-0 pt-14 bg-gradient-to-t from-black/90 to-transparent text-white p-2 rounded-b-md"

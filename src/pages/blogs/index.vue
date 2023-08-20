@@ -2,7 +2,7 @@
 const { data: blogs } = await useAsyncData('blogs', () =>
   queryContent('blogs').find(),
 );
-console.log(blogs);
+
 const dayjs = useDayjs();
 </script>
 
