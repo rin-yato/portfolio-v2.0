@@ -19,13 +19,6 @@ export default defineNuxtConfig({
     enabled: true,
   },
 
-  colorMode: {
-    classSuffix: '',
-    classPrefix: '',
-    preference: 'dark',
-    fallback: 'dark',
-  },
-
   routeRules: {
     '/': { prerender: true },
     '/blogs': { prerender: true },
