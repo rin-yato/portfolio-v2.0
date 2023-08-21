@@ -27,32 +27,32 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    '/': { prerender: true, static: true },
-    '/blogs': { prerender: true, static: true, experimentalNoScripts: true },
-    '/manga': { prerender: true, static: true, experimentalNoScripts: true },
-    '/blogs/**': { prerender: true, static: true, experimentalNoScripts: true },
+    '/': { prerender: true },
+    '/blogs': { prerender: true },
+    '/manga': { prerender: true },
+    '/blogs/**': { prerender: true },
   },
 
   experimental: {
     typedPages: true,
-    payloadExtraction: true,
+    viewTransition: true,
   },
 
   content: {
     highlight: {
       theme: 'poimandres',
-      // preload: [
-      //   'ts',
-      //   'tsx',
-      //   'bash',
-      //   'sh',
-      //   'scss',
-      //   'css',
-      //   'json',
-      //   'docker',
-      //   'markdown',
-      //   'yaml',
-      // ],
+      preload: [
+        'ts',
+        'tsx',
+        'bash',
+        'sh',
+        'scss',
+        'css',
+        'json',
+        'docker',
+        'markdown',
+        'yaml',
+      ],
     },
   },
 });

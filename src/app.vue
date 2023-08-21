@@ -12,14 +12,6 @@ useHead({
   ],
 });
 useSeoMeta({
-  title: 'RinYato - Portfolio',
-  description:
-    "Hi, this is Yato ✌️. I'm a developer and a tiny bit of a designer. Beside coding, I make educational content about tech.",
-  ogTitle: 'RinYato - Portfolio',
-  ogDescription:
-    "Hi, this is Yato ✌️. I'm a developer and a tiny bit of a designer. Beside coding, I make educational content about tech.",
-  ogImage: '/dreamslab-team.jpg',
-  ogUrl: 'https://rinyato.com',
   ogType: 'website',
   ogSiteName: 'RinYato',
   ogLocale: 'en_US',

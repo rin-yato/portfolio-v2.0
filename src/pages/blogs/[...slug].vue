@@ -9,6 +9,18 @@ const onBackToTop = () => {
 <template>
   <article class="prose prose-invert max-w-none">
     <ContentDoc v-slot="{ doc }">
+      <Head>
+        <Title>{{ doc.title }} - RinYato</Title>
+        <Meta name="og:title" :content="doc.title + ' - RinYato'" />
+        <Meta name="og:description" :content="doc.description" />
+        <Meta name="og:image" :content="doc.cover || '/ducks.jpg'" />
+        <Meta name="og:url" :content="`https://rinyato.com${doc._path}`" />
+        <Meta name="twitter:title" :content="doc.title + ' - RinYato'" />
+        <Meta name="twitter:description" :content="doc.description" />
+        <Meta name="twitter:image" :content="doc.cover || '/ducks.jpg'" />
+        <Meta name="twitter:url" :content="`https://rinyato.com${doc._path}`" />
+        <Meta name="description" :content="doc.description" />
+      </Head>
       <h1 class="!my-0">{{ doc.title }}</h1>
       <time
         class="text-gray-400 text-sm"
@@ -39,6 +51,12 @@ const onBackToTop = () => {
 </template>
 
 <style scoped>
+.prose :deep(img) {
+  @apply rounded-lg;
+}
+.prose :deep(.prose-code-inline) {
+  @apply !bg-gray-300/20;
+}
 .prose :deep(h2 a) {
   text-decoration: none !important;
   position: relative !important;

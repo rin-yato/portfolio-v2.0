@@ -10,6 +10,8 @@ useSeoMeta({
     'This is a collection of amazing manga that I have read and enjoyed.',
   ogImage: '/dreamslab-team.jpg',
   ogUrl: 'https://rinyato.com/manga',
+  twitterTitle: 'RinYato - Manga list',
+  twitterImage: '/manga/og.jpeg',
 });
 </script>
 

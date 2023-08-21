@@ -10,6 +10,8 @@ useSeoMeta({
     'Blog articles of tips and tricks about web development, design, and more.',
   ogImage: '/dreamslab-team.jpg',
   ogUrl: 'https://rinyato.com/blogs',
+  twitterTitle: 'RinYato - Blogs',
+  twitterImage: '/dreamslab-team.jpg',
 });
 
 const dayjs = useDayjs();
@@ -23,7 +25,7 @@ const dayjs = useDayjs();
           <NuxtLink :to="blog._path">
             <div class="flex gap-3">
               <div
-                class="flex-1 bg-gray-900 min-w-[100px] md:min-w-[128px] overflow-hidden rounded"
+                class="bg-gray-900 w-[100px] md:min-w-[128px] overflow-hidden rounded"
               >
                 <NuxtImg
                   :src="blog.cover || '/ducks.jpg'"
@@ -32,7 +34,7 @@ const dayjs = useDayjs();
                   sizes="xs:100 sm:128 md:200 lg:350"
                 />
               </div>
-              <div class="h-fit w-fit">
+              <div class="flex-1">
                 <h2
                   class="group-hover:underline leading-snug underline-offset-2"
                 >
