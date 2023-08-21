@@ -26,16 +26,22 @@ export default defineNuxtConfig({
     fallback: 'dark',
   },
 
-  routeRules: {
-    '/': { prerender: true, static: true },
-    '/blogs': { prerender: true, static: true },
-    '/manga': { prerender: true, static: true },
-    '/blogs/**': { prerender: true, static: true },
-  },
+  // routeRules: {
+  //   '/': { prerender: true, static: true },
+  //   '/blogs': { prerender: true, static: true },
+  //   '/manga': { prerender: true, static: true },
+  //   '/blogs/**': { prerender: true, static: true },
+  // },
 
   experimental: {
     typedPages: true,
     payloadExtraction: true,
+  },
+
+  nitro: {
+    future: {
+      nativeSWR: true,
+    },
   },
 
   content: {
