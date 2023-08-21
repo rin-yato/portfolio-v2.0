@@ -17,14 +17,16 @@ const onBackToTop = () => {
         {{ dayjs(doc.date).format('DD MMM YYYY') }}
         - {{ dayjs(doc.date).fromNow() }}
       </time>
-
-      <NuxtImg
-        :src="doc.cover || '/ducks.jpg'"
-        :alt="doc.title + '-cover'"
-        class="rounded-lg bg-gray-900"
-        height="720"
-        sizes="sm:800 md:1000 lg:1200"
-      />
+      <div
+        class="rounded-lg my-6 w-full bg-gray-900 h-[40vh] lg:h-[35vh] overflow-hidden"
+      >
+        <NuxtImg
+          :src="doc.cover || '/ducks.jpg'"
+          :alt="doc.title + '-cover'"
+          class="w-full h-full object-cover !my-0"
+          sizes="xs:350 sm:700 md:1000 lg:1200"
+        />
+      </div>
 
       <ContentRenderer :value="doc" class="render" />
     </ContentDoc>

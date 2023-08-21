@@ -11,3 +11,6 @@ sw.*
 .env
 .output
 .vercel
+
+# Local Netlify folder
+.netlify

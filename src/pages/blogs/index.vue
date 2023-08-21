@@ -22,14 +22,17 @@ const dayjs = useDayjs();
         <li v-for="blog in list" :key="blog._id" class="group">
           <NuxtLink :to="blog._path">
             <div class="flex gap-3">
-              <NuxtImg
-                :src="blog.cover || '/ducks.jpg'"
-                :alt="blog.title + '-cover'"
-                class="rounded-lg bg-gray-900"
-                height="128"
-                width="128"
-              />
-              <div>
+              <div
+                class="flex-1 bg-gray-900 min-w-[100px] md:min-w-[128px] overflow-hidden rounded"
+              >
+                <NuxtImg
+                  :src="blog.cover || '/ducks.jpg'"
+                  :alt="blog.title + '-cover'"
+                  class="w-full h-full object-cover"
+                  sizes="xs:100 sm:128 md:200 lg:350"
+                />
+              </div>
+              <div class="h-fit w-fit">
                 <h2
                   class="group-hover:underline leading-snug underline-offset-2"
                 >
@@ -43,7 +46,7 @@ const dayjs = useDayjs();
                   - {{ dayjs(blog.date).fromNow() }}
                 </time>
                 <p
-                  class="line-clamp-2 pt-1.5 text-sm lg:line-clamp-3 text-gray-400"
+                  class="line-clamp-2 pt-1.5 text-sm md:line-clamp-3 text-gray-400"
                 >
                   {{ blog?.description }}
                 </p>

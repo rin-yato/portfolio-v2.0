@@ -26,15 +26,17 @@ const SocialConfig = [
 <template>
   <section class="space-y-5">
     <div class="flex gap-5">
-      <NuxtImg
-        src="/profile-sky.jpg"
-        alt="Yato"
-        preset="avatar"
-        class="rounded-full bg-gray-900"
-      />
+      <div class="flex w-24 h-24 rounded-full overflow-hidden bg-gray-900">
+        <NuxtImg
+          src="/profile-sky.jpg"
+          alt="Yato"
+          width="300"
+          height="300"
+          format="webp"
+        />
+      </div>
       <div class="my-auto">
         <h2 class="text-xl font-bold">RinYato&nbsp;🍀</h2>
-
         <UButton
           id="email"
           color="gray"
@@ -55,50 +57,57 @@ const SocialConfig = [
     </h1>
     <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
       <div class="flex flex-col gap-3">
+        <div class="h-[150px] w-full rounded bg-gray-900 overflow-hidden">
+          <NuxtImg
+            src="/dreamslab-team.jpg"
+            alt="Dreamslab Team"
+            format="webp"
+            class="w-full h-full object-cover"
+            sizes="xs:150 sm:240 md:390 lg:860"
+          />
+        </div>
+        <div class="h-[250px] w-full rounded bg-gray-900 overflow-hidden">
+          <NuxtImg
+            src="/cats.jpg"
+            alt="Cat"
+            class="w-full h-full object-cover"
+            format="webp"
+            sizes="xs:150 sm:240 md:390 lg:860"
+          />
+        </div>
+      </div>
+
+      <div class="h-[412px] w-full rounded bg-gray-900 overflow-hidden">
         <NuxtImg
-          src="/dreamslab-team.jpg"
-          alt="Dreamslab Team"
-          class="rounded brightness-125 bg-gray-900"
+          src="/angkor.jpeg"
+          alt="Acient Temple"
+          class="w-full h-full object-cover"
           format="webp"
-          height="250"
-          sizes="sm:200 md:400"
-        />
-        <NuxtImg
-          src="/cats.jpg"
-          alt="Cat"
-          class="rounded bg-gray-900"
-          format="webp"
-          height="500"
-          sizes="sm:280 md:450"
+          sizes="xs:150 sm:240 md:390 lg:860"
         />
       </div>
 
-      <NuxtImg
-        src="/angkor.jpeg"
-        alt="Acient Temple"
-        class="rounded bg-gray-900"
-        format="webp"
-        height="868"
-        sizes="sm:287 md:488"
-      />
-
-      <div class="flex flex-row md:flex-col gap-3">
-        <NuxtImg
-          src="/profile-half.jpg"
-          alt="Yato"
-          class="rounded bg-gray-900"
-          format="webp"
-          height="450"
-          sizes="sm:350 md:450"
-        />
-        <NuxtImg
-          src="/house-garden.jpeg"
-          alt="Yato"
-          class="rounded bg-gray-900"
-          format="webp"
-          height="400"
-          sizes="sm:350 md:550"
-        />
+      <div class="flex flex-row md:flex-col gap-3 max-md:col-span-2">
+        <div class="h-[250px] w-full rounded bg-gray-900 overflow-hidden">
+          <NuxtImg
+            src="/profile-half.jpg"
+            alt="Yato"
+            class="w-full h-full object-cover"
+            format="webp"
+            sizes="xs:150 sm:240 md:390 lg:860"
+          />
+        </div>
+        <div
+          class="h-[250px] md:h-[150px] w-full rounded bg-gray-900 overflow-hidden"
+        >
+          <NuxtImg
+            src="/house-garden.jpeg"
+            alt="Yato"
+            class="w-full h-full object-cover"
+            format="webp"
+            sizes="xs:150 sm:240 md:390 lg:860"
+          />
+        </div>
       </div>
     </div>
     <h2 class="lg:font-light leading-relaxed">

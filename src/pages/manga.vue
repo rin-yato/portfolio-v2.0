@@ -30,15 +30,19 @@ useSeoMeta({
             :ui="{
               base: 'invisible lg:visible h-full px-2 py-1 text-sm font-normal border border-gray-700',
             }"
+            class="w-full"
           >
-            <NuxtImg
-              class="rounded-md bg-gray-900 border border-gray-600"
-              :src="manga.cover"
-              :alt="manga.title + '-cover'"
-              :format="manga.cover.endsWith('.gif') ? 'gif' : 'webp'"
-              width="355"
-              height="500"
-            />
+            <div
+              class="rounded-md w-full h-[270px] sm:h-[400px] md:h-[330px] lg:h-[250px] bg-gray-900 border border-gray-600 overflow-hidden"
+            >
+              <NuxtImg
+                :src="manga.cover"
+                :alt="manga.title + '-cover'"
+                :format="manga.cover.endsWith('.gif') ? 'gif' : 'webp'"
+                class="w-full h-full object-cover"
+                sizes="xs:150 sm:230 md:330 lg:380"
+              />
+            </div>
             <div
               class="absolute bottom-0 left-0 right-0 pt-14 bg-gradient-to-t from-black/90 to-transparent text-white p-2 rounded-b-md"
             >
