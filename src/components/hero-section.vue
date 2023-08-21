@@ -29,10 +29,7 @@ const SocialConfig = [
       <NuxtImg
         src="/profile-sky.jpg"
         alt="Yato"
-        height="100"
-        width="100"
-        format="webp"
-        sizes="sm:100 md:200"
+        preset="avatar"
         class="rounded-full bg-gray-900"
       />
       <div class="my-auto">
