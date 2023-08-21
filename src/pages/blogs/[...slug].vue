@@ -55,8 +55,13 @@ const onBackToTop = () => {
   @apply rounded-lg;
 }
 .prose :deep(.prose-code-inline) {
-  @apply !bg-gray-300/20;
+  @apply !bg-gray-300/20 text-gray-200;
 }
+
+.prose :deep(.prose-code) {
+  @apply !bg-gray-900 border-gray-800 text-gray-200 rounded-lg;
+}
+
 .prose :deep(h2 a) {
   text-decoration: none !important;
   position: relative !important;
