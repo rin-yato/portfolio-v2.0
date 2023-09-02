@@ -13,7 +13,7 @@ const onBackToTop = () => {
         <Title>{{ doc.title }} - RinYato</Title>
         <Meta name="og:title" :content="doc.title + ' - RinYato'" />
         <Meta name="og:description" :content="doc.description" />
-        <Meta name="og:image" :content="doc.cover || '/ducks.jpg'" />
+        <Meta name="og:image" :content="getBlogCover(doc)" />
         <Meta name="og:url" :content="`https://rinyato.com${doc._path}`" />
         <Meta name="twitter:title" :content="doc.title + ' - RinYato'" />
         <Meta name="twitter:description" :content="doc.description" />
