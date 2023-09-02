@@ -104,10 +104,10 @@ so make sure you read their guidelines before creating a new branch.
 To create a new branch, run the following command:
 
 ```bash
-git checkout "branch-name"
+git branch "branch-name"
 
 # For example:
-git checkout feat/context-menu
+git branch feat/context-menu
 ```
 
 To switch to your new branch, run the following command:
