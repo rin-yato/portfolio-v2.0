@@ -28,7 +28,7 @@ const dayjs = useDayjs();
                 class="bg-gray-900 w-[100px] md:min-w-[128px] overflow-hidden rounded"
               >
                 <NuxtImg
-                  :src="blog.cover || '/ducks.jpg'"
+                  :src="getBlogCover(blog)"
                   :alt="blog.title + '-cover'"
                   class="w-full h-full object-cover"
                   sizes="xs:100 sm:128 md:200 lg:350"

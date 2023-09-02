@@ -21,7 +21,7 @@ const onBackToTop = () => {
         <Meta name="twitter:url" :content="`https://rinyato.com${doc._path}`" />
         <Meta name="description" :content="doc.description" />
       </Head>
-      <h1 class="!my-0">{{ doc.title }}</h1>
+      <h1 class="!my-0 font-medium max-sm:text-2xl">{{ doc.title }}</h1>
       <time
         class="text-gray-400 text-sm"
         :datetime="dayjs(doc.date).utc().toString()"
@@ -33,7 +33,7 @@ const onBackToTop = () => {
         class="rounded-lg my-6 w-full bg-gray-900 h-[40vh] lg:h-[35vh] overflow-hidden"
       >
         <NuxtImg
-          :src="doc.cover || '/ducks.jpg'"
+          :src="getBlogCover(doc)"
           :alt="doc.title + '-cover'"
           class="w-full h-full object-cover !my-0"
           sizes="xs:350 sm:700 md:1000 lg:1200"
@@ -85,6 +85,10 @@ const onBackToTop = () => {
 
 .prose :deep(.prose-a:hover) {
   color: #4ade80 !important;
+}
+
+.prose :deep(p) {
+  line-height: 1.7;
 }
 
 .prose :deep(.prose-li) {
