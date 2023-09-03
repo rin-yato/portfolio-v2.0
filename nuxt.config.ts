@@ -19,7 +19,6 @@ export default defineNuxtConfig({
 
   image: {
     provider: 'ipx',
-    domains: ['source.boringavatars.com'],
   },
 
   routeRules: {
