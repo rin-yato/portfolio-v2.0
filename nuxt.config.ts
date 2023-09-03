@@ -11,14 +11,11 @@ export default defineNuxtConfig({
     '@nuxthq/ui',
     '@nuxt/image',
     'dayjs-nuxt',
+    'nuxt-vercel-analytics',
   ],
 
   devtools: {
     enabled: true,
-  },
-
-  image: {
-    provider: 'ipx',
   },
 
   routeRules: {
