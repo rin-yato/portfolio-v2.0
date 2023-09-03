@@ -2,6 +2,7 @@
 title: Documenting my coding journey in the past one and a half year
 author: RinYato
 date: 3 Sep 2023 12:45 AM
+cover: /blogs/coding-journey/cover.jpeg
 ---
 
 A diary of my coding journey in the past one and a half year. What I have learned so far, things I should have done better, and a note to my future self.

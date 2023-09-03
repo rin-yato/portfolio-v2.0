@@ -23,7 +23,7 @@ export function boringAvatar({
 export function getBlogCover(blog: ParsedContent) {
   return (
     blog.cover ||
-    boringAvatar({ name: blog.title!, size: 900, type: 'marble', square: true })
+    boringAvatar({ name: blog.title!, size: 1600, type: 'marble', square: true })
   );
 }
 

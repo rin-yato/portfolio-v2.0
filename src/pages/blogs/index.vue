@@ -25,12 +25,12 @@ const dayjs = useDayjs();
           <NuxtLink :to="blog._path">
             <div class="flex gap-3">
               <div
-                class="bg-gray-900 w-[100px] md:min-w-[128px] overflow-hidden rounded"
+                class="bg-gray-900 w-[100px] md:min-w-[128px] h-full flex overflow-hidden rounded"
               >
                 <NuxtImg
                   :src="getBlogCover(blog)"
                   :alt="blog.title + '-cover'"
-                  class="w-full h-full object-cover"
+                  class="w-full object-cover"
                   sizes="xs:100 sm:128 md:200 lg:350"
                 />
               </div>
