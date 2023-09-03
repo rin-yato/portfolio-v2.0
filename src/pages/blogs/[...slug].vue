@@ -12,14 +12,14 @@ const onBackToTop = () => {
       <Head>
         <Title>{{ doc.title }} - RinYato</Title>
         <Meta name="og:title" :content="doc.title + ' - RinYato'" />
-        <Meta name="og:description" :content="doc.description" />
+        <Meta name="og:description" :content="getOgDescription(doc)" />
         <Meta name="og:image" :content="getBlogCover(doc)" />
         <Meta name="og:url" :content="`https://rinyato.com${doc._path}`" />
         <Meta name="twitter:title" :content="doc.title + ' - RinYato'" />
-        <Meta name="twitter:description" :content="doc.description" />
-        <Meta name="twitter:image" :content="doc.cover || '/ducks.jpg'" />
+        <Meta name="twitter:description" :content="getOgDescription(doc)" />
+        <Meta name="twitter:image" :content="getBlogCover(doc)" />
         <Meta name="twitter:url" :content="`https://rinyato.com${doc._path}`" />
-        <Meta name="description" :content="doc.description" />
+        <Meta name="description" :content="getOgDescription(doc)" />
       </Head>
       <h1 class="!my-0 font-medium max-sm:text-2xl">{{ doc.title }}</h1>
       <time

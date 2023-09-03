@@ -23,6 +23,10 @@ export function boringAvatar({
 export function getBlogCover(blog: ParsedContent) {
   return (
     blog.cover ||
-    boringAvatar({ name: blog.title!, size: 128, type: 'marble', square: true })
+    boringAvatar({ name: blog.title!, size: 900, type: 'marble', square: true })
   );
+}
+
+export function getOgDescription(blog: ParsedContent) {
+  return (blog.description as string).replaceAll('\n', ' ');
 }
