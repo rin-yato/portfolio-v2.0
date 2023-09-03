@@ -2,7 +2,7 @@
 title: A Beginner's Guide to Open Source Contribution
 author: RinYato
 date: 21 Aug 2023
-cover: ducks.jpg
+cover: /ducks.jpg
 ---
 
 Have you ever wanted to contribute to open source but didn't know

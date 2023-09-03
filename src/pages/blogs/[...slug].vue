@@ -4,6 +4,14 @@ const dayjs = useDayjs();
 const onBackToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
+
+const { data } = await useAsyncData('blog', () => {
+  return queryContent().findOne();
+});
+
+useSeoMeta({
+  ogImage: data?.value && getBlogCover(data.value),
+});
 </script>
 
 <template>
