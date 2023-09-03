@@ -5,13 +5,22 @@ const onBackToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
-const { data } = await useAsyncData('blog', () => {
-  return queryContent().findOne();
+// get route params
+const { path } = useRoute();
+
+const { data } = await useAsyncData(`blog-${path}`, () => {
+  return queryContent()
+    .where({
+      _path: path,
+    })
+    .findOne();
 });
 
 useSeoMeta({
-  ogImage: data?.value && getBlogCover(data.value),
+  ogImage: data?.value ? getBlogCover(data.value) : null,
 });
+
+console.log(data);
 </script>
 
 <template>
