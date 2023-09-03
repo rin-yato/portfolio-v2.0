@@ -11,12 +11,15 @@ export default defineNuxtConfig({
     '@nuxthq/ui',
     '@nuxt/image',
     'dayjs-nuxt',
-    '@nuxtjs/robots',
-    'nuxt-simple-sitemap',
   ],
 
   devtools: {
     enabled: true,
+  },
+
+  image: {
+    provider: 'ipx',
+    domains: ['source.boringavatars.com'],
   },
 
   routeRules: {
