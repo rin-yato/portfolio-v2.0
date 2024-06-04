@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   srcDir: 'src',
 
-  extends: ['@nuxt-themes/typography'],
+  extends: ['@nuxt-themes/typography', 'nuxt-umami'],
 
   modules: [
     '@nuxt/devtools',
@@ -15,6 +15,12 @@ export default defineNuxtConfig({
 
   devtools: {
     enabled: true,
+  },
+
+  appConfig: {
+    umami: {
+      version: 2,
+    }
   },
 
   routeRules: {

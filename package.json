@@ -23,5 +23,8 @@
     "eslint": "^8.44.0",
     "nuxt": "^3.6.5",
     "nuxt-icon": "^0.5.0"
+  },
+  "dependencies": {
+    "nuxt-umami": "^2.6.2"
   }
 }
